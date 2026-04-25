@@ -109,13 +109,22 @@ with col2:
     vind = st.selectbox("Vindhastighet", list(vindar.keys()))
 
 # =========================
+# KOLUMNER DU VILL VISA
+# =========================
+visa_kolumner = st.multiselect(
+    "Välj vilka kolumner du vill visa",
+    ["Cementhalt", "Hållfasthet", "CO2", "Slump"],  # <-- ÄNDRA DENNA
+    default=["Cementhalt", "Hållfasthet"]
+)
+
+# =========================
 # KNAPP
 # =========================
 if st.button("Beräkna"):
 
     rad = temperaturer[temp] + vindar[vind]
 
-    # ===== KVALITET (7d + 14d) =====
+    # ===== KVALITET =====
     if val_typ == "Kvalitet":
 
         df_7d = pd.read_excel(fil_7d, sheet_name=sheet_name)
@@ -126,22 +135,61 @@ if st.button("Beräkna"):
         else:
             st.success(f"Resultat rad {rad}")
 
+            result_7d = df_7d.iloc[rad]
+            result_14d = df_14d.iloc[rad]
+
             col1, col2 = st.columns(2)
 
             with col1:
                 st.subheader("7 dagar")
-                st.dataframe(df_7d.iloc[[rad]])
+
+                for col in visa_kolumner:
+                    st.markdown(f"""
+                    <div style="
+                        padding:10px;
+                        border-radius:10px;
+                        background-color:#f0f2f6;
+                        margin-bottom:6px;
+                    ">
+                        <b>{col}</b><br>{result_7d[col]}
+                    </div>
+                    """, unsafe_allow_html=True)
 
             with col2:
                 st.subheader("14 dagar")
-                st.dataframe(df_14d.iloc[[rad]])
+
+                for col in visa_kolumner:
+                    st.markdown(f"""
+                    <div style="
+                        padding:10px;
+                        border-radius:10px;
+                        background-color:#f0f2f6;
+                        margin-bottom:6px;
+                    ">
+                        <b>{col}</b><br>{result_14d[col]}
+                    </div>
+                    """, unsafe_allow_html=True)
 
     # ===== MILJÖ =====
     else:
+
         df = pd.read_excel(fil, sheet_name=sheet_name)
 
         if rad < 0 or rad >= len(df):
             st.error("Rad utanför tabell")
         else:
             st.success(f"Resultat rad {rad}")
-            st.dataframe(df.iloc[[rad]])
+
+            result = df.iloc[rad]
+
+            for col in visa_kolumner:
+                st.markdown(f"""
+                <div style="
+                    padding:10px;
+                    border-radius:10px;
+                    background-color:#f0f2f6;
+                    margin-bottom:6px;
+                ">
+                    <b>{col}</b><br>{result[col]}
+                </div>
+                """, unsafe_allow_html=True)
