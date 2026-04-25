@@ -108,7 +108,6 @@ with col1:
 with col2:
     vind = st.selectbox("Vindhastighet", list(vindar.keys()))
 
-
 # =========================
 # KNAPP
 # =========================
@@ -131,11 +130,11 @@ if st.button("Beräkna"):
 
             with col1:
                 st.subheader("7 dagar")
-                st.dataframe(df_7d.iloc[[rad]][visa_kolumner])
+                st.dataframe(df_7d.iloc[[rad]])
 
             with col2:
                 st.subheader("14 dagar")
-                st.dataframe(df_14d.iloc[[rad]][visa_kolumner])
+                st.dataframe(df_14d.iloc[[rad]])
 
     # ===== MILJÖ =====
     else:
@@ -145,4 +144,4 @@ if st.button("Beräkna"):
             st.error("Rad utanför tabell")
         else:
             st.success(f"Resultat rad {rad}")
-            st.dataframe(df.iloc[[rad]][visa_kolumner])
+            st.dataframe(df.iloc[[rad]])
