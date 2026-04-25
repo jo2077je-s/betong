@@ -108,14 +108,6 @@ with col1:
 with col2:
     vind = st.selectbox("Vindhastighet", list(vindar.keys()))
 
-# =========================
-# KOLUMNER DU VILL VISA
-# =========================
-visa_kolumner = st.multiselect(
-    "Välj vilka kolumner du vill visa",
-    ["Slagg mängd", "Gjuttemperatur", "Temperatur mothjutningsyta", "Väderskydd, uppvärmning (ingen vind)", "Täckning [mm]","<7 d och >70% [Dagar]","<14 d och >70% [Dagar]" ],
-    default=["Slagg mängd", "Gjuttemperatur", "Temperatur mothjutningsyta", "Väderskydd, uppvärmning (ingen vind)", "Täckning [mm]"]
-)
 
 # =========================
 # KNAPP
