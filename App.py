@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Beräkningsapp")
+st.set_page_config(layout="wide")
+st.title("🏗️ Beräkningsapp")
 
 # =========================
 # 1. KONSTRUKTION
@@ -30,13 +31,14 @@ elif val_konstruktion == "Bjälklag" and val_typ == "Miljö":
     fil = "Bjälklag_Miljo.xlsx"
 
 elif val_konstruktion == "Vägg" and val_typ == "Kvalitet":
-    fil = "Vagg_Kvalitet.xlsx"
+    fil_7d = "Vagg_Kvalitet_7d.xlsx"
+    fil_14d = "Vagg_Kvalitet_14d.xlsx"
 
 else:
     fil = "Vagg_Miljo.xlsx"
 
 # =========================
-# VAL AV SHEET (NY DEL)
+# VAL AV SHEET
 # =========================
 sheet_name = None
 
@@ -68,7 +70,6 @@ elif val_typ == "Miljö":
     val_miljo = st.selectbox("Välj slagg (%)", list(miljo_sheets.keys()))
     sheet_name = miljo_sheets[val_miljo]
 
-
 # =========================
 # TEMP + VIND
 # =========================
@@ -81,8 +82,13 @@ vindar = {
     "0": 0, "2": 1, "7": 2, "12": 3, "20": 4
 }
 
-temp = st.selectbox("Temperatur", list(temperaturer.keys()))
-vind = st.selectbox("Vindhastighet", list(vindar.keys()))
+col1, col2 = st.columns(2)
+
+with col1:
+    temp = st.selectbox("Temperatur", list(temperaturer.keys()))
+
+with col2:
+    vind = st.selectbox("Vindhastighet", list(vindar.keys()))
 
 # =========================
 # KNAPP
@@ -91,6 +97,7 @@ if st.button("Beräkna"):
 
     rad = temperaturer[temp] + vindar[vind]
 
+    # ===== KVALITET (7d + 14d) =====
     if val_typ == "Kvalitet":
 
         df_7d = pd.read_excel(fil_7d, sheet_name=sheet_name)
@@ -111,6 +118,7 @@ if st.button("Beräkna"):
                 st.subheader("14 dagar")
                 st.dataframe(df_14d.iloc[[rad]])
 
+    # ===== MILJÖ =====
     else:
         df = pd.read_excel(fil, sheet_name=sheet_name)
 
@@ -119,6 +127,3 @@ if st.button("Beräkna"):
         else:
             st.success(f"Resultat rad {rad}")
             st.dataframe(df.iloc[[rad]])
-    else:
-        st.success(f"Resultat rad {rad}")
-        st.dataframe(df.iloc[[rad]])
