@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.set_page_config(layout="wide")
-st.title("🏗️ Beräkningsapp")
+st.title("Klimatförbättrad bettong")
 
 # =========================
 # 1. KONSTRUKTION
@@ -74,8 +74,15 @@ elif val_typ == "Miljö":
 # TEMP + VIND
 # =========================
 temperaturer = {
-    "-20": 40, "-15": 35, "-10": 30, "-5": 25,
-    "0": 20, "5": 15, "10": 10, "15": 5, "20": 0
+    "20": 0,
+    "15": 5,
+    "10": 10,
+    "5": 15,
+    "0": 20,
+    "-5": 25,
+    "-10": 30,
+    "-15": 35,
+    "-20": 40
 }
 
 vindar = {
