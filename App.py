@@ -1,8 +1,19 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="centered")
 st.title("Klimatförbättrad bettong")
+st.markdown("""
+<style>
+div[data-baseweb="select"] * {
+    cursor: pointer !important;
+}
+
+div[data-baseweb="select"] {
+    border-radius: 8px;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # =========================
 # 1. KONSTRUKTION
