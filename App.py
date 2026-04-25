@@ -113,7 +113,7 @@ with col2:
 # =========================
 visa_kolumner = st.multiselect(
     "Välj vilka kolumner du vill visa",
-    ["Cementhalt", "Hållfasthet", "CO2", "Slump"],
+    ["Slagg mängd", "Gjuttemperatur", "Temperatur mothjutningsyta", "Väderskydd, uppvärmning (ingen vind)", "Täckning [mm]","<7 d och >70% [Dagar]","<14 d och >70% [Dagar]" ],
     default=["Cementhalt", "Hållfasthet"]
 )
 
