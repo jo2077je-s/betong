@@ -113,7 +113,7 @@ with col2:
 # =========================
 visa_kolumner = st.multiselect(
     "Välj vilka kolumner du vill visa",
-    ["Cementhalt", "Hållfasthet", "CO2", "Slump"],  # <-- ÄNDRA DENNA
+    ["Cementhalt", "Hållfasthet", "CO2", "Slump"],
     default=["Cementhalt", "Hållfasthet"]
 )
 
@@ -139,11 +139,11 @@ if st.button("Beräkna"):
 
             with col1:
                 st.subheader("7 dagar")
-                st.dataframe(df_7d.iloc[[rad]])
+                st.dataframe(df_7d.iloc[[rad]][visa_kolumner])
 
             with col2:
                 st.subheader("14 dagar")
-                st.dataframe(df_14d.iloc[[rad]])
+                st.dataframe(df_14d.iloc[[rad]][visa_kolumner])
 
     # ===== MILJÖ =====
     else:
@@ -153,4 +153,4 @@ if st.button("Beräkna"):
             st.error("Rad utanför tabell")
         else:
             st.success(f"Resultat rad {rad}")
-            st.dataframe(df.iloc[[rad]])
+            st.dataframe(df.iloc[[rad]][visa_kolumner])
