@@ -23,7 +23,8 @@ val_typ = st.selectbox(
 # FILVAL
 # =========================
 if val_konstruktion == "Bjälklag" and val_typ == "Kvalitet":
-    fil = "Bjälklag_Kvalitet.xlsx"
+    fil_7d = "Bjälklag_Kvalitet_7d.xlsx"
+    fil_14d = "Bjälklag_Kvalitet_14d.xlsx"
 
 elif val_konstruktion == "Bjälklag" and val_typ == "Miljö":
     fil = "Bjälklag_Miljo.xlsx"
