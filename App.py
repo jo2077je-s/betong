@@ -46,7 +46,7 @@ kol_bjalklag_7d = {
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
     "Täckning [mm]": "Täckning [mm]",
-    "<7 d och >70% [Dagar]": "<7 d och >70 % [Dagar]"
+    "<7 d och >70% [Dagar]": "<7 d och >70% [Dagar]"
 }
 
 kol_bjalklag_14d = {
