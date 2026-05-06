@@ -86,7 +86,7 @@ kol_vagg = {
 # =========================
 # 1. KONSTRUKTION
 # =========================
-val_konstruktion = st.selectbox(
+val_konstruktion = st.radio(
     "Välj konstruktion",
     ["Bjälklag", "Vägg"]
 )
@@ -94,7 +94,7 @@ val_konstruktion = st.selectbox(
 # =========================
 # 2. TYP
 # =========================
-val_typ = st.selectbox(
+val_typ = st.radio(
     "Välj (Kvalitet eller Miljö)",
     ["Kvalitet", "Miljö"]
 )
