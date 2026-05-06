@@ -82,19 +82,20 @@ if val_typ == "Kvalitet":
 
 elif val_typ == "Miljö":
 
-    miljo_sheets = {
-        "10%": "Bjälklag (10% slagg)",
-        "20%": "Bjälklag (20% slagg)",
-        "30%": "Bjälklag (30% slagg)",
-        "40%": "Bjälklag (40% slagg)"
-    }
-else:
-    miljo_sheets = {
-        "10%": "Vägg (10% slagg)",
-        "20%": "Vägg (20% slagg)",
-        "30%": "Vägg (30% slagg)",
-        "40%": "Vägg (40% slagg)"
-    }
+    if val_konstruktion == "Bjälklag":
+        miljo_sheets = {
+            "10%": "Bjälklag (10% slagg)",
+            "20%": "Bjälklag (20% slagg)",
+            "30%": "Bjälklag (30% slagg)",
+            "40%": "Bjälklag (40% slagg)"
+        }
+    else:
+        miljo_sheets = {
+            "10%": "Vägg (10% slagg)",
+            "20%": "Vägg (20% slagg)",
+            "30%": "Vägg (30% slagg)",
+            "40%": "Vägg (40% slagg)"
+        }
 
     val_miljo = st.selectbox("Välj slagg (%)", list(miljo_sheets.keys()))
     sheet_name = miljo_sheets[val_miljo]
