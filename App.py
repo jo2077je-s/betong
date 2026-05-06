@@ -129,12 +129,12 @@ if st.button("Beräkna"):
     # ===== KVALITET =====
     if val_typ == "Kvalitet":
 
-    try:
-        df_7d = pd.read_excel(fil_7d, sheet_name=sheet_name)
-        df_14d = pd.read_excel(fil_14d, sheet_name=sheet_name)
-    except Exception as e:
-        st.error(f"Fel vid läsning av Excel: {e}")
-        st.stop()
+        try:
+            df_7d = pd.read_excel(fil_7d, sheet_name=sheet_name)
+            df_14d = pd.read_excel(fil_14d, sheet_name=sheet_name)
+        except Exception as e:
+            st.error(f"Fel vid läsning av Excel: {e}")
+            st.stop()
 
         if rad < 0 or rad >= len(df_7d):
             st.error("Rad utanför tabell")
