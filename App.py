@@ -37,16 +37,6 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
 
         cols[i % 2].metric(label, str(value))
 
-    # =========================
-    # 🔥 SPECIAL FÖR LÅNGA VÄRDEN
-    # =========================
-        if label == "Formisolering":
-            st.markdown(f"**{label}**")
-            st.markdown(f"**{value}**")
-            st.divider()
-        else:
-            cols[i % 2].metric(label, value)
-
 # =========================
 # KOLUMN-DEFINITIONER (NYA)
 # =========================
