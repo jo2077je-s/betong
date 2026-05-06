@@ -111,6 +111,15 @@ vindar = {
     "0": 0, "2": 1, "7": 2, "12": 3, "20": 4
 }
 
+col1, col2 = st.columns(2)
+
+with col1:
+    temp = st.selectbox("Temperatur", list(temperaturer.keys()))
+
+with col2:
+    vind = st.selectbox("Vindhastighet", list(vindar.keys()))
+
+
 
 # =========================
 # KNAPP
