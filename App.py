@@ -41,7 +41,7 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
 # KOLUMN-DEFINITIONER (NYA)
 # =========================
 kol_bjalklag_7d = {
-    "Slaggmängd": "Slaggmängd",
+    "Slaggmängd": "Slagg mängd",
     "Gjuttemperatur": "Gjuttemperatur",
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
@@ -50,7 +50,7 @@ kol_bjalklag_7d = {
 }
 
 kol_bjalklag_14d = {
-    "Slaggmängd": "Slaggmängd",
+    "Slaggmängd": "Slagg mängd",
     "Gjuttemperatur": "Gjuttemperatur",
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
