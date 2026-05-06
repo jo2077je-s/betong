@@ -235,28 +235,24 @@ if st.button("Beräkna"):
             st.success(f"Resultat rad {rad}")
 
             if val_konstruktion == "Bjälklag":
-                col1, col2 = st.columns(2)
-
-                with col1:
-                    row_7d = df_7d.iloc[rad]
-                    visa_resultat(row_7d, kol_bjalklag_7d, "7 dagar")
 
                 # ===== 7 DAGAR =====
-st.markdown("""
-<h2 style='margin-top:30px;'>7 dagar</h2>
-""", unsafe_allow_html=True)
+                st.markdown("""
+                <h2 style='margin-top:30px;'>7 dagar</h2>
+                """, unsafe_allow_html=True)
 
-row_7d = df_7d.iloc[rad]
-visa_resultat(row_7d, kol_bjalklag_7d)
+                row_7d = df_7d.iloc[rad]
+                visa_resultat(row_7d, kol_bjalklag_7d)
+    
+                st.divider()
 
-# ===== 14 DAGAR =====
-st.markdown("""
-<h2 style='margin-top:40px;'>14 dagar</h2>
-""", unsafe_allow_html=True)
+                # ===== 14 DAGAR =====
+                st.markdown("""
+                <h2 style='margin-top:30px;'>14 dagar</h2>
+                """, unsafe_allow_html=True)
 
-row_14d = df_14d.iloc[rad]
-visa_resultat(row_14d, kol_bjalklag_14d)
-
+                row_14d = df_14d.iloc[rad]
+                visa_resultat(row_14d, kol_bjalklag_14d)
             else:
                 row = df.iloc[rad]
                 visa_resultat(row, kol_vagg, "Resultat")
