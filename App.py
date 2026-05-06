@@ -1,16 +1,12 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(layout="centered")
-st.title("Klimatförbättrad bettong")
 st.markdown("""
 <style>
-div[data-baseweb="select"] * {
-    cursor: pointer !important;
-}
-
-div[data-baseweb="select"] {
-    border-radius: 8px;
+div[data-testid="stMetricValue"] {
+    white-space: normal !important;
+    overflow-wrap: break-word;
+    line-height: 1.3;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -35,7 +31,10 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
         else:
             value = row.get(col, "Saknas")
 
-        cols[i % 2].metric(label, str(value))
+        if label == "Formisolering":
+            cols[i % 2].metric(label, str(value).replace(",", "\n"))
+        else:
+            cols[i % 2].metric(label, str(value))
 
 # =========================
 # KOLUMN-DEFINITIONER (NYA)
