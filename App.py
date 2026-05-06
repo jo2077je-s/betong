@@ -88,6 +88,13 @@ elif val_typ == "Miljö":
         "30%": "Bjälklag (30% slagg)",
         "40%": "Bjälklag (40% slagg)"
     }
+else:
+    miljo_sheets = {
+        "10%": "Vägg (10% slagg)",
+        "20%": "Vägg (20% slagg)",
+        "30%": "Vägg (30% slagg)",
+        "40%": "Vägg (40% slagg)"
+    }
 
     val_miljo = st.selectbox("Välj slagg (%)", list(miljo_sheets.keys()))
     sheet_name = miljo_sheets[val_miljo]
