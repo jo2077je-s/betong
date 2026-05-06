@@ -35,11 +35,7 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
         else:
             value = row.get(col, "Saknas")
 
-        cols[i % 2].markdown(f"**{label}**")
-        cols[i % 2].markdown(
-            f"<div style='white-space: pre-wrap;'>{value}</div>",
-            unsafe_allow_html=True
-)
+        cols[i % 2].metric(label, value)
 
 # =========================
 # KOLUMN-DEFINITIONER (NYA)
