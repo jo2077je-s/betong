@@ -23,17 +23,25 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
 
     cols = st.columns(2)
 
-   for i, (label, col) in enumerate(kolumner.items()):
+    for i, (label, col) in enumerate(kolumner.items()):
 
-    # 🔹 värde-hämtning
+        # 🔹 värde-hämtning
         if isinstance(col, list):
-        value = "Saknas"
+            value = "Saknas"
             for c in col:
                 if c in row:
-                value = row[c]
+                    value = row[c]
                     break
         else:
             value = row.get(col, "Saknas")
+
+        # 🔥 Formisolering = egen rad
+        if label == "Formisolering":
+            st.markdown(f"**{label}**")
+            st.markdown(f"{value}")
+            st.divider()
+        else:
+            cols[i % 2].metric(label, value)
 
     # =========================
     # 🔥 SPECIAL FÖR LÅNGA VÄRDEN
