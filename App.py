@@ -55,15 +55,27 @@ sheet_name = None
 
 if val_typ == "Kvalitet":
 
-    sheets = {
-        "C20/25": "Bjälklag (C20-25)",
-        "C25/30": "Bjälklag (C25-30)",
-        "C28/35": "Bjälklag (C28-35)",
-        "C30/37": "Bjälklag (C30-37)",
-        "C32/40": "Bjälklag (C32-40)",
-        "C35/45": "Bjälklag (C35-45)",
-        "C40/50": "Bjälklag (C40-50)"
-    }
+    if val_konstruktion == "Bjälklag":
+        sheets = {
+            "C20/25": "Bjälklag (C20-25)",
+            "C25/30": "Bjälklag (C25-30)",
+            "C28/35": "Bjälklag (C28-35)",
+            "C30/37": "Bjälklag (C30-37)",
+            "C32/40": "Bjälklag (C32-40)",
+            "C35/45": "Bjälklag (C35-45)",
+            "C40/50": "Bjälklag (C40-50)"
+        }
+
+    else:  # Vägg
+        sheets = {
+            "C20/25": "Vägg (C20-25)",
+            "C25/30": "Vägg (C25-30)",
+            "C28/35": "Vägg (C28-35)",
+            "C30/37": "Vägg (C30-37)",
+            "C32/40": "Vägg (C32-40)",
+            "C35/45": "Vägg (C35-45)",
+            "C40/50": "Vägg (C40-50)"
+        }
 
     val_sheet = st.selectbox("Välj betongkvalitet", list(sheets.keys()))
     sheet_name = sheets[val_sheet]
