@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 
+st.title("Klimatförbättrad bettong")
+st.set_page_config(layout="centered")
 st.markdown("""
 <style>
 div[data-testid="stMetricValue"] {
