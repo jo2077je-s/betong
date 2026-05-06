@@ -17,21 +17,20 @@ div[data-testid="stMetricValue"] {
 def visa_resultat(row, kolumner, rubrik="Resultat"):
     st.subheader(rubrik)
 
-    cols = st.columns(2)
+    col = st.container()
 
-    for i, (label, col) in enumerate(kolumner.items()):
+    for i, (label, colname) in enumerate(kolumner.items()):
 
-        # 🔹 värde-hämtning
-        if isinstance(col, list):
+        if isinstance(colname, list):
             value = "Saknas"
-            for c in col:
+            for c in colname:
                 if c in row:
                     value = row[c]
                     break
         else:
-            value = row.get(col, "Saknas")
+            value = row.get(colname, "Saknas")
 
-        cols[i % 2].metric(label, str(value))
+        col.metric(label, str(value))
 # =========================
 # KOLUMN-DEFINITIONER (NYA)
 # =========================
