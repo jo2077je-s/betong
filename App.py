@@ -238,16 +238,16 @@ if st.button("Beräkna"):
                 col1, col2 = st.columns(2)
 
                 with col1:
-                    st.subheader("7 dagar")
-                    st.dataframe(df_7d.iloc[[rad]])
+                    row_7d = df_7d.iloc[rad]
+                    visa_resultat(row_7d, kol_bjalklag_7d, "7 dagar")
 
                 with col2:
-                    st.subheader("14 dagar")
-                    st.dataframe(df_14d.iloc[[rad]])
+                    row_14d = df_14d.iloc[rad]
+                    visa_resultat(row_14d, kol_bjalklag_14d, "14 dagar")
 
             else:
-                st.subheader("Resultat")
-                st.dataframe(df.iloc[[rad]])
+                row = df.iloc[rad]
+                visa_resultat(row, kol_vagg, "Resultat")
 
     # ===== MILJÖ =====
     else:
@@ -257,4 +257,10 @@ if st.button("Beräkna"):
             st.error("Rad utanför tabell")
         else:
             st.success(f"Resultat rad {rad}")
-            st.dataframe(df.iloc[[rad]])
+
+        row = df.iloc[rad]
+
+        if val_konstruktion == "Bjälklag":
+            visa_resultat(row, kol_miljo_14d, "Resultat")
+        else:
+            visa_resultat(row, kol_vagg, "Resultat")
