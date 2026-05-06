@@ -32,9 +32,21 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
             value = row.get(col, "Saknas")
 
         if label == "Formisolering":
-            cols[i % 2].metric(label, str(value).replace(",", "\n"))
-        else:
-            cols[i % 2].metric(label, str(value))
+    cols[i % 2].markdown(f"""
+    <div style="
+        padding: 0.6rem 0.8rem;
+        border-radius: 0.5rem;
+        background: rgba(250,250,250,0.05);
+        border: 1px solid rgba(250,250,250,0.15);
+    ">
+        <div style="font-size: 0.85rem; opacity: 0.7;">{label}</div>
+        <div style="white-space: pre-wrap; font-weight: 600;">
+            {value}
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+else:
+    cols[i % 2].metric(label, str(value))
 
 # =========================
 # KOLUMN-DEFINITIONER (NYA)
