@@ -16,6 +16,78 @@ div[data-baseweb="select"] {
 """, unsafe_allow_html=True)
 
 # =========================
+# HJÄLPFUNKTION (NY)
+# =========================
+def visa_resultat(row, kolumner, rubrik="Resultat"):
+    st.subheader(rubrik)
+
+    cols = st.columns(2)
+
+    for i, (label, col) in enumerate(kolumner.items()):
+
+        # 🔹 Om flera möjliga kolumnnamn
+        if isinstance(col, list):
+            value = "Saknas"
+            for c in col:
+                if c in row:
+                    value = row[c]
+                    break
+        else:
+            value = row.get(col, "Saknas")
+
+        cols[i % 2].metric(label, value)
+
+# =========================
+# KOLUMN-DEFINITIONER (NYA)
+# =========================
+kol_bjalklag_7d = {
+    "Slaggmängd": "Slaggmängd",
+    "Gjuttemperatur": "Gjuttemperatur",
+    "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
+    "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
+    "Täckning [mm]": "Täckning [mm]",
+    "<7 d och >70% [Dagar]": "<7 d och >70 % [Dagar]"
+}
+
+kol_bjalklag_14d = {
+    "Slaggmängd": "Slaggmängd",
+    "Gjuttemperatur": "Gjuttemperatur",
+    "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
+    "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
+    "Täckning [mm]": "Täckning [mm]",
+    "<14 d och >70% [Dagar]": "<14 d och >70 % [Dagar]"
+}
+
+kol_miljo_7d = {
+    "Kvalitet": "Kvalitet",
+    "Gjuttemperatur": "Gjuttemperatur",
+    "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
+    "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
+    "Täckning [mm]": "Täckning [mm]",
+    "<7 d och >70% [Dagar]": "<7 d och >70 % [Dagar]"
+}
+
+kol_miljo_14d = {
+    "Kvalitet": "Kvalitet",
+    "Gjuttemperatur": "Gjuttemperatur",
+    "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
+    "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
+    "Täckning [mm]": "Täckning [mm]",
+    "<14 d och >70% [Dagar]": "<14 d och >70 % [Dagar]"
+}
+
+kol_vagg = {
+    "Slagg/Kvalitet": ["Slaggmängd", "Kvalitet"],
+    "Gjuttemperatur": "Gjuttemperatur",
+    "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
+    "Värmekabel": "Värmekabel",
+    "Antal värmekablar": "Antal värmekablar",
+    "Täckning": "Täckning [mm]",
+    "Formisolering": "Formisolering [mm]",
+    "<17h och >6 MPa": "<17 Timmar och >6 Mpa"
+}
+
+# =========================
 # 1. KONSTRUKTION
 # =========================
 val_konstruktion = st.selectbox(
