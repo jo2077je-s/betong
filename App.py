@@ -31,11 +31,7 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
         else:
             value = row.get(col, "Saknas")
 
-      if label == "Formisolering":
-            cols[i % 2].metric(label, str(value).replace(",", "\n"))
-      else:
-            cols[i % 2].metric(label, str(value))
-
+        cols[i % 2].metric(label, str(value))
 # =========================
 # KOLUMN-DEFINITIONER (NYA)
 # =========================
