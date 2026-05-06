@@ -111,26 +111,6 @@ vindar = {
     "0": 0, "2": 1, "7": 2, "12": 3, "20": 4
 }
 
-if val_konstruktion == "Bjälklag":
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.subheader("7 dagar")
-        st.dataframe(df_7d.iloc[[rad]])
-
-    with col2:
-        st.subheader("14 dagar")
-        st.dataframe(df_14d.iloc[[rad]])
-
-else:
-    st.subheader("Resultat")
-    st.dataframe(df.iloc[[rad]])
-
-with col1:
-    temp = st.selectbox("Temperatur", list(temperaturer.keys()))
-
-with col2:
-    vind = st.selectbox("Vindhastighet", list(vindar.keys()))
 
 # =========================
 # KNAPP
@@ -146,37 +126,39 @@ if st.button("Beräkna"):
             if val_konstruktion == "Bjälklag":
                 df_7d = pd.read_excel(fil_7d, sheet_name=sheet_name)
                 df_14d = pd.read_excel(fil_14d, sheet_name=sheet_name)
-
-            else:  # Vägg
+            else:
                 df = pd.read_excel(fil, sheet_name=sheet_name)
 
-        except Exception as e:
-        st.error(f"Fel vid läsning av Excel: {e}")
-        st.stop()
         except Exception as e:
             st.error(f"Fel vid läsning av Excel: {e}")
             st.stop()
 
+        # ===== Kontroll rad =====
         if val_konstruktion == "Bjälklag":
-    out_of_range = rad < 0 or rad >= len(df_7d)
-else:
-    out_of_range = rad < 0 or rad >= len(df)
+            out_of_range = rad < 0 or rad >= len(df_7d)
+        else:
+            out_of_range = rad < 0 or rad >= len(df)
 
-if out_of_range:
-    st.error("Rad utanför tabell")
+        if out_of_range:
             st.error("Rad utanför tabell")
+
         else:
             st.success(f"Resultat rad {rad}")
 
-            col1, col2 = st.columns(2)
+            if val_konstruktion == "Bjälklag":
+                col1, col2 = st.columns(2)
 
-            with col1:
-                st.subheader("7 dagar")
-                st.dataframe(df_7d.iloc[[rad]])
+                with col1:
+                    st.subheader("7 dagar")
+                    st.dataframe(df_7d.iloc[[rad]])
 
-            with col2:
-                st.subheader("14 dagar")
-                st.dataframe(df_14d.iloc[[rad]])
+                with col2:
+                    st.subheader("14 dagar")
+                    st.dataframe(df_14d.iloc[[rad]])
+
+            else:
+                st.subheader("Resultat")
+                st.dataframe(df.iloc[[rad]])
 
     # ===== MILJÖ =====
     else:
