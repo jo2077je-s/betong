@@ -35,13 +35,7 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
         else:
             value = row.get(col, "Saknas")
 
-        # 🔥 Formisolering = egen rad
-        if label == "Formisolering":
-            st.markdown(f"**{label}**")
-            st.markdown(f"{value}")
-            st.divider()
-        else:
-            cols[i % 2].metric(label, value)
+        cols[i % 2].metric(label, str(value))
 
     # =========================
     # 🔥 SPECIAL FÖR LÅNGA VÄRDEN
