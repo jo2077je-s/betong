@@ -42,11 +42,10 @@ elif val_konstruktion == "Bjälklag" and val_typ == "Miljö":
     fil = "Bjälklag_Miljo.xlsx"
 
 elif val_konstruktion == "Vägg" and val_typ == "Kvalitet":
-    fil_7d = "Vägg_Hållfasthet_17H.xlsx"
-    fil_14d = "Vägg_slagg_17H.xlsx"
+    fil = "Vägg_Hållfasthet_17H.xlsx"
 
-else:
-    fil = "Vagg_Miljo.xlsx"
+elif val_konstruktion == "Vägg" and val_typ == "Miljö":
+    fil = "Vägg_slagg_17H.xlsx"
 
 # =========================
 # VAL AV SHEET
@@ -127,8 +126,8 @@ if st.button("Beräkna"):
 
     rad = temperaturer[temp] + vindar[vind]
 
-    # ===== KVALITET (7d + 14d) =====
-if val_typ == "Kvalitet":
+    # ===== KVALITET =====
+    if val_typ == "Kvalitet":
 
     try:
         df_7d = pd.read_excel(fil_7d, sheet_name=sheet_name)
