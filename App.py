@@ -43,6 +43,7 @@ kol_bjalklag_7d = {
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
     "Täckning [mm]": "Täckning [mm]",
     "<7 d och >70% [Dagar]": "<7 d och >70% [Dagar]"
+    "Kommentar": "Kommentar"
 }
 
 kol_bjalklag_14d = {
@@ -52,6 +53,7 @@ kol_bjalklag_14d = {
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
     "Täckning [mm]": "Täckning [mm]",
     "<14 d och >70% [Dagar]": "<14 d och >70 % [Dagar]"
+    "Kommentar": "Kommentar"
 }
 
 kol_miljo_7d = {
@@ -61,6 +63,7 @@ kol_miljo_7d = {
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
     "Täckning [mm]": "Täckning [mm]",
     "<7 d och >70% [Dagar]": "<7 d och >70 % [Dagar]"
+    "Kommentar": "Kommentar"
 }
 
 kol_miljo_14d = {
@@ -70,6 +73,7 @@ kol_miljo_14d = {
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
     "Täckning [mm]": "Täckning [mm]",
     "<14 d och >70% [Dagar]": "<14 d och >70 % [Dagar]"
+    "Kommentar": "Kommentar"
 }
 
 kol_vagg = {
@@ -81,6 +85,7 @@ kol_vagg = {
     "Täckning": "Täckning [mm]",
     "Formisolering": "Formisolering [mm]",
     "<17h och >6 MPa": "<17 Timmar och >6 Mpa"
+    "Kommentar": "Kommentar"
 }
 
 # =========================
