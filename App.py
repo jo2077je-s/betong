@@ -30,6 +30,7 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
     st.subheader(rubrik)
 
     col = st.container()
+    cols = st.columns(2)
 
     for i, (label, colname) in enumerate(kolumner.items()):
 
@@ -127,8 +128,8 @@ if val_konstruktion == "Bjälklag" and val_typ == "Kvalitet":
     fil_14d = "Bjälklag_Kvalitet_14d.xlsx"
 
 elif val_konstruktion == "Bjälklag" and val_typ == "Miljö":
-    fil = "Bjälklag_Miljo_7d.xlsx"
-    fil = "Bjälklag_Miljo_14d.xlsx"
+    fil_7d = "Bjälklag_Miljo_7d.xlsx"
+    fil_14d = "Bjälklag_Miljo_14d.xlsx"
 
 elif val_konstruktion == "Vägg" and val_typ == "Kvalitet":
     fil = "Vägg_Hållfasthet_17H.xlsx"
