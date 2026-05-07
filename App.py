@@ -68,7 +68,7 @@ kol_miljo_7d = {
 
 kol_miljo_14d = {
     "Kvalitet": "Kvalitet",
-    "Gjuttemperatur": "Gjuttemperatur",
+    "Gjuttemperatur [°C]": "Gjuttemperatur",
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
     "Täckning [mm]": "Täckning [mm]",
