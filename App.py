@@ -112,7 +112,8 @@ if val_konstruktion == "Bjälklag" and val_typ == "Kvalitet":
     fil_14d = "Bjälklag_Kvalitet_14d.xlsx"
 
 elif val_konstruktion == "Bjälklag" and val_typ == "Miljö":
-    fil = "Bjälklag_Miljo.xlsx"
+    fil = "Bjälklag_Miljo_7d.xlsx"
+    fil = "Bjälklag_Miljo_14d.xlsx"
 
 elif val_konstruktion == "Vägg" and val_typ == "Kvalitet":
     fil = "Vägg_Hållfasthet_17H.xlsx"
