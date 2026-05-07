@@ -76,7 +76,7 @@ kol_miljo_14d = {
     "Kommentar": "Kommentar"
 }
 
-kol_vagg = {
+kol_vagg_Kvalitet_17H = {
     "Slagg/Kvalitet": ["Slaggmängd", "Kvalitet"],
     "Gjuttemperatur": "Gjuttemperatur",
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
@@ -87,6 +87,19 @@ kol_vagg = {
     "<17h och >6 MPa": "<17 Timmar och >6 Mpa",
     "Kommentar": "Kommentar"
 }
+
+kol_vagg_Miljo_17H = {
+    "Slagg/Kvalitet": ["Slaggmängd", "Kvalitet"],
+    "Gjuttemperatur": "Gjuttemperatur",
+    "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
+    "Värmekabel": "Värmekabel",
+    "Antal värmekablar": "Antal värmekablar",
+    "Täckning": "Täckning [mm]",
+    "Formisolering": "Formisolering [mm]",
+    "<17h och >6 MPa": "<17 Timmar och >6 Mpa",
+    "Kommentar": "Kommentar"
+}
+
 
 # =========================
 # 1. KONSTRUKTION
