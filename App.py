@@ -41,8 +41,12 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
                     break
         else:
             value = row.get(colname, "Saknas")
+        
+        unit = enheter.get(label, "")
+        display_value = f"{value} {unit}".strip()
 
-        col.metric(label, str(value))
+        cols[i % 2].metric(label, display_value)
+        
 # =========================
 # KOLUMN-DEFINITIONER (NYA)
 # =========================
