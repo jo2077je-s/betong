@@ -16,6 +16,16 @@ div[data-testid="stMetricValue"] {
 # =========================
 # HJÄLPFUNKTION (NY)
 # =========================
+
+enheter = {
+    "Gjuttemperatur": "°C",
+    "Temperatur motgjutningsyta": "°C",
+    "Täckning [mm]": "mm",
+    "<7 d och >70 % [Dagar]": "dagar",
+    "<14 d och >70 % [Dagar]": "dagar",
+    "<17 Timmar och >6 Mpa": "timmar"
+}
+
 def visa_resultat(row, kolumner, rubrik="Resultat"):
     st.subheader(rubrik)
 
@@ -68,11 +78,11 @@ kol_miljo_7d = {
 
 kol_miljo_14d = {
     "Kvalitet": "Kvalitet",
-    "Gjuttemperatur [°C]": "Gjuttemperatur",
+    "Gjuttemperatur": "Gjuttemperatur",
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
-    "Täckning [mm]": "Täckning [mm]",
-    "<14 d och >70% [Dagar]": "<14 d och >70 % [Dagar]",
+    "Täckning": "Täckning [mm]",
+    "<14 d och >70%": "<14 d och >70 % [Dagar]",
     "Kommentar": "Kommentar"
 }
 
