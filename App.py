@@ -62,8 +62,8 @@ kol_bjalklag_7d = {
     "Gjuttemperatur": "Gjuttemperatur",
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
-    "Täckning [mm]": "Täckning [mm]",
-    "<7 d och >70% [Dagar]": "<7 d och >70% [Dagar]",
+    "Täckning": "Täckning [mm]",
+    "Formrivning efter": "<7 d och >70% [Dagar]",
     "Kommentar": "Kommentar"
 }
 
@@ -72,8 +72,8 @@ kol_bjalklag_14d = {
     "Gjuttemperatur": "Gjuttemperatur",
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
-    "Täckning [mm]": "Täckning [mm]",
-    "<14 d och >70% [Dagar]": "<14 d och >70 % [Dagar]",
+    "Täckning": "Täckning [mm]",
+    "Formrivning efter": "<14 d och >70 % [Dagar]",
     "Kommentar": "Kommentar"
 }
 
@@ -82,8 +82,8 @@ kol_miljo_7d = {
     "Gjuttemperatur": "Gjuttemperatur",
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
-    "Täckning [mm]": "Täckning [mm]",
-    "<7 d och >70% [Dagar]": "<7 d och >70 % [Dagar]",
+    "Täckning": "Täckning [mm]",
+    "Formrivning efter": "<7 d och >70 % [Dagar]",
     "Kommentar": "Kommentar"
 }
 
@@ -93,7 +93,7 @@ kol_miljo_14d = {
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
     "Täckning": "Täckning [mm]",
-    "<14 d och >70%": "<14 d och >70 % [Dagar]",
+    "Formrivning efter": "<14 d och >70 % [Dagar]",
     "Kommentar": "Kommentar"
 }
 
@@ -105,7 +105,7 @@ kol_vagg_kvalitet = {
     "Antal värmekablar": "Antal värmekablar",
     "Täckning": "Täckning [mm]",
     "Formisolering": "Formisolering [mm]",
-    "<17h och >6 MPa": "<17 Timmar och >6 Mpa",
+    "Formrivning efter": "<17 Timmar och >6 Mpa",
     "Kommentar": "Kommentar"
 }
 
@@ -117,7 +117,7 @@ kol_vagg_miljo = {
     "Antal värmekablar": "Antal värmekablar",
     "Täckning": "Täckning [mm]",
     "Formisolering": "Formisolering [mm]",
-    "<17h och >6 MPa": "<17 Timmar och >6 Mpa",
+    "Formrivning efter": "<17 Timmar och >6 Mpa",
     "Kommentar": "Kommentar"
 }
 
