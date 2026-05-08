@@ -37,11 +37,12 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
             f"""
             <div style="
                 background-color: #ff6666;
-                border-left: 6px solid #ffcc00;
-                padding: 12px;
-                border-radius: 6px;
-                font-size: 16px;
-                margin-top: 10px;
+                padding: 15px;
+                border-radius: 10px;
+                border-left: 6px solid #cc0000;
+                color: #1a1a1a;
+                font-size: 18px;
+                line-height: 1.4;
             ">
                 {row["Kommentar"]}
             </div>
