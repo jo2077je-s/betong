@@ -280,14 +280,14 @@ if st.button("Beräkna"):
 
         try:
             if val_konstruktion == "Bjälklag":
-            df_7d = pd.read_excel(fil_7d, sheet_name=sheet_name)
-            df_14d = pd.read_excel(fil_14d, sheet_name=sheet_name)
+                df_7d = pd.read_excel(fil_7d, sheet_name=sheet_name)
+                df_14d = pd.read_excel(fil_14d, sheet_name=sheet_name)
             else:
-            df = pd.read_excel(fil, sheet_name=sheet_name)
+                df = pd.read_excel(fil, sheet_name=sheet_name)
 
         except Exception as e:
-        st.error(f"Fel vid läsning av Excel: {e}")
-        st.stop()
+            st.error(f"Fel vid läsning av Excel: {e}")
+            st.stop()
 
     # ===== BJÄLKLAG =====
     if val_konstruktion == "Bjälklag":
