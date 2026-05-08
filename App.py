@@ -46,7 +46,11 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
             value = row.get(colname, "Saknas")
         
         unit = enheter.get(label, "")
-        display_value = f"{value} {unit}".strip()
+        
+        if pd.isna(value):
+            display_value = ""
+        else:
+            display_value = f"{value} {unit}".strip()
 
         cols[i % 2].metric(label, display_value)
         
