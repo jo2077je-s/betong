@@ -275,7 +275,7 @@ if st.button("Beräkna"):
                 row = df.iloc[rad]
                 visa_resultat(row, kol_vagg, "Resultat")
 
-   # ===== MILJÖ =====
+      # ===== MILJÖ =====
     else:
 
         try:
@@ -289,33 +289,33 @@ if st.button("Beräkna"):
             st.error(f"Fel vid läsning av Excel: {e}")
             st.stop()
 
-    # ===== BJÄLKLAG =====
-    if val_konstruktion == "Bjälklag":
+        # ===== BJÄLKLAG =====
+        if val_konstruktion == "Bjälklag":
 
-        if rad < 0 or rad >= len(df_7d):
-            st.error("Rad utanför tabell")
+            if rad < 0 or rad >= len(df_7d):
+                st.error("Rad utanför tabell")
 
+            else:
+                st.success(f"Resultat rad {rad}")
+
+                st.markdown("## 7 dagar")
+                row_7d = df_7d.iloc[rad]
+                visa_resultat(row_7d, kol_miljo_7d)
+
+                st.divider()
+
+                st.markdown("## 14 dagar")
+                row_14d = df_14d.iloc[rad]
+                visa_resultat(row_14d, kol_miljo_14d)
+
+        # ===== VÄGG =====
         else:
-            st.success(f"Resultat rad {rad}")
 
-            st.markdown("## 7 dagar")
-            row_7d = df_7d.iloc[rad]
-            visa_resultat(row_7d, kol_miljo_7d)
+            if rad < 0 or rad >= len(df):
+                st.error("Rad utanför tabell")
 
-            st.divider()
+            else:
+                st.success(f"Resultat rad {rad}")
 
-            st.markdown("## 14 dagar")
-            row_14d = df_14d.iloc[rad]
-            visa_resultat(row_14d, kol_miljo_14d)
-
-    # ===== VÄGG =====
-   else:
-
-        if rad < 0 or rad >= len(df):
-            st.error("Rad utanför tabell")
-
-        else:
-            st.success(f"Resultat rad {rad}")
-
-            row = df.iloc[rad]
-            visa_resultat(row, kol_vagg, "Resultat")
+                row = df.iloc[rad]
+                visa_resultat(row, kol_vagg, "Resultat")
