@@ -23,9 +23,9 @@ enheter = {
     "Täckning [mm]": "mm",
     "Värmekabel": "W/m",
     "Antal värmekablar": "stycken",
-    "Formrivning efter (Krav <7 dagar och >70 %)": "Dagar",
-    "Formrivning efter (Krav <14 dagar och >70 %)": "Dagar",
-    "Formrivning efter (Krav <17 Timmar och >6 MPa)": "Timmar"
+    "Formrivningstid (Krav <7 dagar och >70 %)": "Dagar",
+    "Formrivningstid (Krav <14 dagar och >70 %)": "Dagar",
+    "Formrivningstid (Krav <17 Timmar och >6 MPa)": "Timmar"
 }
 
 def visa_resultat(row, kolumner, rubrik="Resultat"):
@@ -63,7 +63,7 @@ kol_bjalklag_7d = {
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
     "Täckning": "Täckning [mm]",
-    "Formrivning efter (Krav <7 dagar och >70 %)": "<7 d och >70% [Dagar]",
+    "Formrivningstid (Krav <7 dagar och >70 %)": "<7 d och >70% [Dagar]",
     "Kommentar": "Kommentar"
 }
 
@@ -73,7 +73,7 @@ kol_bjalklag_14d = {
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
     "Täckning": "Täckning [mm]",
-    "Formrivning efter (Krav <14 dagar och >70 %)": "<14 d och >70 % [Dagar]",
+    "Formrivningstid (Krav <14 dagar och >70 %)": "<14 d och >70 % [Dagar]",
     "Kommentar": "Kommentar"
 }
 
@@ -83,7 +83,7 @@ kol_miljo_7d = {
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
     "Täckning": "Täckning [mm]",
-    "Formrivning efter (Krav <7 dagar och >70 %)": "<7 d och >70 % [Dagar]",
+    "Formrivningstid (Krav <7 dagar och >70 %)": "<7 d och >70 % [Dagar]",
     "Kommentar": "Kommentar"
 }
 
@@ -93,7 +93,7 @@ kol_miljo_14d = {
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
     "Täckning": "Täckning [mm]",
-    "Formrivning efter (Krav <14 dagar och >70 %)": "<14 d och >70 % [Dagar]",
+    "Formrivningstid (Krav <14 dagar och >70 %)": "<14 d och >70 % [Dagar]",
     "Kommentar": "Kommentar"
 }
 
@@ -105,7 +105,7 @@ kol_vagg_kvalitet = {
     "Antal värmekablar": "Antal värmekablar",
     "Täckning": "Täckning [mm]",
     "Formisolering": "Formisolering [mm]",
-    "Formrivning efter (Krav <17 Timmar och >6 MPa)": "<17 Timmar och >6 Mpa",
+    "Formrivningstid (Krav <17 Timmar och >6 MPa)": "<17 Timmar och >6 Mpa",
     "Kommentar": "Kommentar"
 }
 
@@ -117,7 +117,7 @@ kol_vagg_miljo = {
     "Antal värmekablar": "Antal värmekablar",
     "Täckning": "Täckning [mm]",
     "Formisolering": "Formisolering [mm]",
-    "Formrivning efter (Krav <17 Timmar och >6 MPa)": "<17 Timmar och >6 Mpa",
+    "Formrivningstid (Krav <17 Timmar och >6 MPa)": "<17 Timmar och >6 Mpa",
     "Kommentar": "Kommentar"
 }
 
