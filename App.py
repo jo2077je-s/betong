@@ -25,7 +25,7 @@ enheter = {
     "Antal värmekablar": "stycken",
     "<7 d och >70 % [Dagar]": "dagar",
     "<14 d och >70 % [Dagar]": "dagar",
-    "<17 Timmar och >6 Mpa": "timmar"
+    "<17h och >6 Mpa": "timmar"
 }
 
 def visa_resultat(row, kolumner, rubrik="Resultat"):
