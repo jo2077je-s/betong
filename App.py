@@ -31,6 +31,12 @@ enheter = {
 def visa_resultat(row, kolumner, rubrik="Resultat"):
     st.subheader(rubrik)
 
+    # ===== SPECIALREGL: bara kommentar =====
+    if "Kommentar" in row and pd.notna(row["Kommentar"]) and str(row["Kommentar"]).strip() != "":
+        st.markdown("### Kommentar")
+        st.write(row["Kommentar"])
+        return
+
     col = st.container()
     cols = st.columns(2)
 
