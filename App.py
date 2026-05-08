@@ -33,8 +33,21 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
 
     # ===== SPECIALREGL: bara kommentar =====
     if "Kommentar" in row and pd.notna(row["Kommentar"]) and str(row["Kommentar"]).strip() != "":
-        st.markdown("### Kommentar")
-        st.write(row["Kommentar"])
+        st.markdown(
+            f"""
+            <div style="
+                background-color: #fff3cd;
+                border-left: 6px solid #ffcc00;
+                padding: 12px;
+                border-radius: 6px;
+                font-size: 16px;
+            ">
+                <b>Kommentar</b><br>
+                {row["Kommentar"]}
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
         return
 
     col = st.container()
