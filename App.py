@@ -28,24 +28,27 @@ enheter = {
     "Formrivningstid (Krav <17 Timmar och >6 MPa)": "Timmar"
 }
 
-# ===== SPECIALREGL: bara kommentar =====
-if "Kommentar" in row and pd.notna(row["Kommentar"]) and str(row["Kommentar"]).strip() != "":
-    st.markdown(
-        f"""
-        <div style="
-            background-color: #fff3cd;
-            border-left: 6px solid #ffcc00;
-            padding: 12px;
-            border-radius: 6px;
-            font-size: 16px;
-            margin-top: 10px;
-        ">
-            {row["Kommentar"]}
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-    return
+def visa_resultat(row, kolumner, rubrik="Resultat"):
+    st.subheader(rubrik)
+
+    # ===== SPECIALREGL: bara kommentar =====
+    if "Kommentar" in row and pd.notna(row["Kommentar"]) and str(row["Kommentar"]).strip() != "":
+        st.markdown(
+            f"""
+            <div style="
+                background-color: #fff3cd;
+                border-left: 6px solid #ffcc00;
+                padding: 12px;
+                border-radius: 6px;
+                font-size: 16px;
+                margin-top: 10px;
+            ">
+                {row["Kommentar"]}
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+        return
 
     col = st.container()
     cols = st.columns(2)
