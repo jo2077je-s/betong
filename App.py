@@ -97,8 +97,20 @@ kol_miljo_14d = {
     "Kommentar": "Kommentar"
 }
 
-kol_vagg = {
-    "Slagg/Kvalitet": ["Slaggmängd", "Kvalitet"],
+kol_vagg_kvalitet = {
+    "Slaggmängd": "Slaggmängd",
+    "Gjuttemperatur": "Gjuttemperatur",
+    "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
+    "Värmekabel": "Värmekabel",
+    "Antal värmekablar": "Antal värmekablar",
+    "Täckning": "Täckning [mm]",
+    "Formisolering": "Formisolering [mm]",
+    "<17h och >6 MPa": "<17 Timmar och >6 Mpa",
+    "Kommentar": "Kommentar"
+}
+
+kol_vagg_miljo = {
+    "Kvalitet": "Kvalitet",
     "Gjuttemperatur": "Gjuttemperatur",
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Värmekabel": "Värmekabel",
@@ -279,7 +291,7 @@ if st.button("Beräkna"):
                 visa_resultat(row_14d, kol_bjalklag_14d)
             else:
                 row = df.iloc[rad]
-                visa_resultat(row, kol_vagg, "Resultat")
+                visa_resultat(row, kol_vagg_kvalitet, "Resultat")
 
       # ===== MILJÖ =====
     else:
@@ -324,4 +336,4 @@ if st.button("Beräkna"):
                 st.success(f"Resultat rad {rad}")
 
                 row = df.iloc[rad]
-                visa_resultat(row, kol_vagg, "Resultat")
+                visa_resultat(row, kol_vagg_miljo, "Resultat")
