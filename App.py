@@ -97,11 +97,6 @@ kol_miljo_14d = {
     "Kommentar": "Kommentar"
 }
 
-if val_typ == "Miljö":
-    första_rubrik = "Kvalitet"
-else:
-    första_rubrik = "Slaggmängd"
-
 kol_vagg = {
     "Slagg/Kvalitet": ["Slaggmängd", "Kvalitet"],
     "Gjuttemperatur": "Gjuttemperatur",
