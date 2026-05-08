@@ -276,16 +276,16 @@ if st.button("Beräkna"):
                 visa_resultat(row, kol_vagg, "Resultat")
 
    # ===== MILJÖ =====
-else:
+    else:
 
-    try:
-        if val_konstruktion == "Bjälklag":
+        try:
+            if val_konstruktion == "Bjälklag":
             df_7d = pd.read_excel(fil_7d, sheet_name=sheet_name)
             df_14d = pd.read_excel(fil_14d, sheet_name=sheet_name)
-        else:
+            else:
             df = pd.read_excel(fil, sheet_name=sheet_name)
 
-    except Exception as e:
+        except Exception as e:
         st.error(f"Fel vid läsning av Excel: {e}")
         st.stop()
 
@@ -309,7 +309,7 @@ else:
             visa_resultat(row_14d, kol_miljo_14d)
 
     # ===== VÄGG =====
-    else:
+   else:
 
         if rad < 0 or rad >= len(df):
             st.error("Rad utanför tabell")
