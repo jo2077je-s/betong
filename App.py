@@ -36,7 +36,7 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
         st.markdown(
             f"""
             <div style="
-                background-color: #fff3cd;
+                background-color: #ff0000;
                 border-left: 6px solid #ffcc00;
                 padding: 12px;
                 border-radius: 6px;
