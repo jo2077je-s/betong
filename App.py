@@ -7,8 +7,14 @@ st.markdown("""
 <style>
 div[data-testid="stMetricValue"] {
     white-space: normal !important;
-    overflow-wrap: break-word;
-    line-height: 1.3;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    line-height: 1.3 !important;
+    font-size: 1rem !important;
+}
+
+div[data-testid="stMetric"] {
+    height: auto !important;
 }
 </style>
 """, unsafe_allow_html=True)
