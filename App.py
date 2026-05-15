@@ -7,7 +7,7 @@ st.markdown("""
 <style>
 
 div[data-testid="stMetricValue"] > div {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
