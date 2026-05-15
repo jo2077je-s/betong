@@ -5,10 +5,12 @@ st.title("Klimatförbättrad betong")
 st.set_page_config(layout="centered")
 st.markdown("""
 <style>
-div[data-testid="stMetricValue"] {
+div[data-testid="stMetricValue"] > div {
     white-space: normal !important;
-    overflow-wrap: anywhere !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
     word-break: break-word !important;
+    overflow-wrap: break-word !important;
     line-height: 1.3 !important;
 }
 
