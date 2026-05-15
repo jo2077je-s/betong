@@ -79,32 +79,7 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
         else:
             display_value = f"{value} {unit}".strip()
 
-        cols[i % 2].markdown(f"""
-        <div style="
-            padding: 6px 0px;
-        ">
-
-            <div style="
-                font-size: 0.85rem;
-                color: #9e9e9e;
-                margin-bottom: 2px;
-            ">
-            {label}
-        </div>
-
-        <div style="
-            font-size: 1.15rem;
-            font-weight: 600;
-            line-height: 1.35;
-            white-space: normal;
-            overflow-wrap: anywhere;
-            word-break: break-word;
-        ">
-            {display_value}
-        </div>
-
-    </div>
-    """, unsafe_allow_html=True)
+        cols[i % 2].metric(label, display_value)
         
 # =========================
 # KOLUMN-DEFINITIONER (NYA)
