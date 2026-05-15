@@ -5,15 +5,15 @@ st.title("Klimatförbättrad betong")
 st.set_page_config(layout="centered")
 st.markdown("""
 <style>
-/* VALUE (själva resultatet) */
+
 div[data-testid="stMetricValue"] > div {
-    font-size: 1rem !important;   /* 👈 gör texten mindre */
-    white-space: nowrap !important; /* behåller metric-beteende */
+    font-size: 2rem !important;
+    white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
 }
 
-/* LABEL */
+
 div[data-testid="stMetricLabel"] {
     font-size: 0.75rem !important;
 }
