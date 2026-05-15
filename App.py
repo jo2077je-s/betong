@@ -25,6 +25,7 @@ div[data-testid="stMetricLabel"] {
 # =========================
 
 enheter = {
+    "Slaggmängd": "Slagg",
     "Gjuttemperatur": "°C",
     "Temperatur motgjutningsyta": "°C",
     "Täckning [mm]": "mm",
