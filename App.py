@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Klimatförbättrad bettong")
+st.title("Klimatförbättrad betong")
 st.set_page_config(layout="centered")
 st.markdown("""
 <style>
