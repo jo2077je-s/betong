@@ -7,7 +7,7 @@ st.markdown("""
 <style>
 /* VALUE (själva resultatet) */
 div[data-testid="stMetricValue"] > div {
-    font-size: 0.9rem !important;   /* 👈 gör texten mindre */
+    font-size: 1rem !important;   /* 👈 gör texten mindre */
     white-space: nowrap !important; /* behåller metric-beteende */
     overflow: hidden !important;
     text-overflow: ellipsis !important;
