@@ -212,6 +212,7 @@ elif val_typ == "Miljö":
 
     if val_konstruktion == "Bjälklag":
         miljo_sheets = {
+            "0%": "Bjälklag (0% slagg)",
             "10%": "Bjälklag (10% slagg)",
             "20%": "Bjälklag (20% slagg)",
             "30%": "Bjälklag (30% slagg)",
@@ -219,6 +220,7 @@ elif val_typ == "Miljö":
         }
     else:
         miljo_sheets = {
+            "0%": "Vägg (0% slagg)",
             "10%": "Vägg (10% slagg)",
             "20%": "Vägg (20% slagg)",
             "30%": "Vägg (30% slagg)",
