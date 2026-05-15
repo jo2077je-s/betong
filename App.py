@@ -11,7 +11,7 @@ div[data-testid="stMetricValue"] > div {
     text-overflow: unset !important;
     word-break: break-word !important;
     overflow-wrap: break-word !important;
-    line-height: 0.7 !important;
+    line-height: 1 !important;
 }
 
 div[data-testid="stMetric"] {
