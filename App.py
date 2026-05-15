@@ -81,32 +81,30 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
 
         cols[i % 2].markdown(f"""
         <div style="
-            padding: 12px;
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.15);
-            background-color: rgba(255,255,255,0.03);
-            margin-bottom: 12px;
+            padding: 6px 0px;
         ">
-        <div style="
-            font-size: 0.85rem;
-            color: #9e9e9e;
-            margin-bottom: 6px;
-        ">
-            {label}
-    </div>
 
-    <div style="
-        font-size: 1.1rem;
-        font-weight: 600;
-        line-height: 1.4;
-        white-space: normal;
-        overflow-wrap: anywhere;
-        word-break: break-word;
-    ">
-        {display_value}
+            <div style="
+                font-size: 0.85rem;
+                color: #9e9e9e;
+                margin-bottom: 2px;
+            ">
+            {label}
+        </div>
+
+        <div style="
+            font-size: 1.15rem;
+            font-weight: 600;
+            line-height: 1.35;
+            white-space: normal;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        ">
+            {display_value}
+        </div>
+
     </div>
-</div>
-""", unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
         
 # =========================
 # KOLUMN-DEFINITIONER (NYA)
