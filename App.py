@@ -5,7 +5,11 @@ left, center, right = st.columns([0.65,1,0.5])
 
 with center:
     st.image("App vit bakgrund.png", width=250)
-st.title("Klimatförbättrad betong")
+st.markdown("""
+<h1 style="text-align:center;">
+Klimatförbättrad betong
+</h1>
+""", unsafe_allow_html=True)
 col1, col2, col3 = st.columns(3)
 
 with col1:
