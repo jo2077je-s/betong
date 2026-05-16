@@ -4,7 +4,7 @@ import pandas as pd
 left, center, right = st.columns([0.65,1,0.5])
 
 with center:
-    st.image("App vit bakgrund.png", width=250)
+    st.image("App.png", width=250)
 st.markdown("""
 <h1 style="text-align:center;">
 Klimatförbättrad betong
