@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 
+st.image("App vit bakgrund.png", width=250)
 st.title("Klimatförbättrad betong")
 st.set_page_config(layout="centered")
 st.markdown("""
