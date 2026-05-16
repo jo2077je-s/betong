@@ -1,11 +1,31 @@
 import streamlit as st
 import pandas as pd
 
-left, center, right = st.columns([0.7,1,0.5])
+left, center, right = st.columns([0.65,1,0.5])
 
 with center:
     st.image("App vit bakgrund.png", width=250)
 st.title("Klimatförbättrad betong")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.markdown("""
+    ### Kontakt
+    Namn: Jonatan Jerström  
+    Tel: 072-393 85 20
+    """)
+
+with col2:
+    st.markdown("""
+    ### E-post
+    Jonatan.jerstrom@hotmail.com
+    """)
+
+with col3:
+    st.markdown("""
+    ### Version
+    v1.0
+    """)
 st.set_page_config(layout="centered")
 st.markdown("""
 <style>
