@@ -14,22 +14,28 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.markdown("""
-    ### Kontakt
-    Namn: Jonatan Jerström  
-    Tel: 072-393 85 20
-    """)
+    <div style="text-align:center;">
+    <h4>Kontakt</h4>
+    Jonatan Jerström<br>
+    072-393 85 20
+    </div>
+    """, unsafe_allow_html=True)
 
 with col2:
     st.markdown("""
-    ### E-post
+    <div style="text-align:center;">
+    <h4>E-post</h4>
     Jonatan.jerstrom@hotmail.com
-    """)
+    </div>
+    """, unsafe_allow_html=True)
 
 with col3:
     st.markdown("""
-    ### Version
+    <div style="text-align:center;">
+    <h4>Version</h4>
     v1.0
-    """)
+    </div>
+    """, unsafe_allow_html=True)
 st.set_page_config(layout="centered")
 st.markdown("""
 <style>
