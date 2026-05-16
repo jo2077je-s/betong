@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-left, center, right = st.columns([2,1,2])
+left, center, right = st.columns([1,1,1])
 
 with center:
     st.image("App vit bakgrund.png", width=250)
