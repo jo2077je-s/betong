@@ -17,7 +17,7 @@ with col1:
     ### Kontakt
     **Namn:** Jonatan Jerström  
     **Telelefon:** 072-393 85 20  
-    **E-post:** Jonatan.jerstrom@hotmail.com
+    **E-post:** jonatan.jerstrom@hotmail.com
     """)
 
 with col2:
