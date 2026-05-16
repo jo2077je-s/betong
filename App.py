@@ -16,7 +16,7 @@ with col1:
     st.markdown("""
     ### Kontakt
     **Namn:** Jonatan Jerström  
-    **Tel:** 072-393 85 20  
+    **Telelefon:** 072-393 85 20  
     **E-post:** Jonatan.jerstrom@hotmail.com
     """)
 
