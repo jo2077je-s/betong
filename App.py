@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
 
-col1, col2, col3 = st.columns([1,2,1])
+left, center, right = st.columns([2,1,2])
 
-with col2:
+with center:
     st.image("App vit bakgrund.png", width=250)
 st.title("Klimatförbättrad betong")
 st.set_page_config(layout="centered")
