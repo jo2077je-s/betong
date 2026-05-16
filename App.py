@@ -28,7 +28,7 @@ with col2:
 with col3:
     st.markdown("""
     ### Version
-    v2.3.1
+    v 2.3.1
     """)
 
 
