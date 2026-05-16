@@ -10,23 +10,18 @@ st.markdown("""
 Klimatförbättrad betong
 </h1>
 """, unsafe_allow_html=True)
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("""
     ### Kontakt
     Namn: Jonatan Jerström  
     Tel: 072-393 85 20
+    E-post: Jonatan.jerstrom@hotmail.com
     """)
 
 with col2:
-    st.markdown("""
-    ### E-post
-    Jonatan.jerstrom@hotmail.com
-    """)
-
-with col3:
-    st.markdown("""
+   st.markdown("""
     ### Version
     v 2.3.1
     """)
