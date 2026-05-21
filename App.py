@@ -187,14 +187,14 @@ val_konstruktion = st.selectbox(
 # 2. TYP
 # =========================
 val_typ = st.selectbox(
-    "Välj utgångspunkt (Kvalitet eller Andel slagg)",
-    ["Kvalitet", "Andel slagg"]
+    "Välj utgångspunkt (Betongkvalitet eller Andel slagg)",
+    ["Betongkvalitet", "Andel slagg"]
 )
 
 # =========================
 # FILVAL
 # =========================
-if val_konstruktion == "Bjälklag" and val_typ == "Kvalitet":
+if val_konstruktion == "Bjälklag" and val_typ == "Betongkvalitet":
     fil_7d = "Bjälklag_Kvalitet_7d.xlsx"
     fil_14d = "Bjälklag_Kvalitet_14d.xlsx"
 
@@ -202,7 +202,7 @@ elif val_konstruktion == "Bjälklag" and val_typ == "Andel slagg":
     fil_7d = "Bjälklag_Miljo_7d.xlsx"
     fil_14d = "Bjälklag_Miljo_14d.xlsx"
 
-elif val_konstruktion == "Vägg" and val_typ == "Kvalitet":
+elif val_konstruktion == "Vägg" and val_typ == "Betongkvalitet":
     fil = "Vägg_Hållfasthet_17H.xlsx"
 
 elif val_konstruktion == "Vägg" and val_typ == "Andel slagg":
@@ -213,7 +213,7 @@ elif val_konstruktion == "Vägg" and val_typ == "Andel slagg":
 # =========================
 sheet_name = None
 
-if val_typ == "Kvalitet":
+if val_typ == "Betongkvalitet":
 
     if val_konstruktion == "Bjälklag":
         sheets = {
