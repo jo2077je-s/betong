@@ -102,10 +102,12 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
         
         if pd.isna(value):
             display_value = ""
+
+        elif str(value).strip() == "-":
+            display_value = "-"
+
         else:
             display_value = f"{value} {unit}".strip()
-
-        cols[i % 2].metric(label, display_value)
         
 # =========================
 # KOLUMN-DEFINITIONER (NYA)
