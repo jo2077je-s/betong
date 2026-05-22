@@ -116,7 +116,7 @@ kol_bjalklag_7d = {
     "Temperatur motgjutningsyta": "Temperatur motgjutningsyta",
     "Väderskydd / uppvärmning": "Väderskydd, uppvärmning (ingen vind)",
     "Täckning": "Täckning [mm]",
-    "Formrivningstid (Krav <7 dagar och >70 %)": "<7 d och >70 % [Dagar]",
+    "Formrivningstid (Krav <7 dagar och >70 %)": "<7 d och >70% [Dagar]",
     "Kommentar": "Kommentar"
 }
 
@@ -300,7 +300,7 @@ if st.button("Beräkna"):
     rad = temperaturer[temp] + vindar[vind]
 
     # ===== KVALITET =====
-    if val_typ == "Kvalitet":
+    if val_typ == "Betongkvalitet":
 
         try:
             if val_konstruktion == "Bjälklag":
