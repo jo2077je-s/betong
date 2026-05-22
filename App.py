@@ -108,6 +108,8 @@ def visa_resultat(row, kolumner, rubrik="Resultat"):
 
         else:
             display_value = f"{value} {unit}".strip()
+            
+        cols[i % 2].metric(label, display_value)
         
 # =========================
 # KOLUMN-DEFINITIONER (NYA)
