@@ -32,7 +32,7 @@ st.markdown("""
 <style>
 
 div[data-testid="stMetricValue"] > div {
-    font-size: 1.6rem !important;
+    font-size: 1.5rem !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
@@ -64,7 +64,7 @@ enheter = {
 def visa_resultat(row, kolumner, rubrik="Resultat"):
     st.subheader(rubrik)
 
-    # ===== SPECIALREGL: bara kommentar =====
+    # ===== SPECIALREGL =====
     if "Kommentar" in row and pd.notna(row["Kommentar"]) and str(row["Kommentar"]).strip() != "":
         st.markdown(
             f"""
